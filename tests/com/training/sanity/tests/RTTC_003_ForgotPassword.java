@@ -21,7 +21,7 @@ public class RTTC_003_ForgotPassword {
 	private String baseUrl;
 	private RTTC_002_LoginPOM loginPOM;
 	private static Properties properties;
-//	private ScreenShot screenShot;
+    private ScreenShot screenShot;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -35,7 +35,7 @@ public class RTTC_003_ForgotPassword {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new RTTC_002_LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
-	//	screenShot = new ScreenShot(driver); 
+		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
